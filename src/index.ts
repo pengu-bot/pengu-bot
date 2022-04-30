@@ -1,4 +1,4 @@
-import { readline } from 'readline';
+// import { readline } from 'readline';
 import { appendFile} from 'fs';
 import { Client, MessageEmbed } from 'discord.js';
 import config from './config';
@@ -22,7 +22,7 @@ client.on('ready', () => {
     type: "LISTENING"
   });
   console.log(`${client.user?.tag} is in ${client.guilds.cache.size} servers`)
-  const Guilds = client.guilds.cache.map(guild => [/*guild.id*/ guild.name, guild.owner]);
+  const Guilds = client.guilds.cache.map(guild => [guild.id, guild.name, guild.owner]);
   console.log(Guilds);
 });
 
