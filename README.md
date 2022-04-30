@@ -1,4 +1,6 @@
-# Security Policy
+# Pengu! The open-source bot.
+
+For more info, read our [docs]()
 
 ## Supported Versions
 
