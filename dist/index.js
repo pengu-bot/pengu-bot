@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-require("readline");
+// import { readline } from 'readline';
 const fs_1 = require("fs");
 const discord_js_1 = require("discord.js");
 const config_1 = tslib_1.__importDefault(require("./config"));
@@ -20,7 +20,7 @@ client.on('ready', () => {
         type: "LISTENING"
     });
     console.log(`${client.user?.tag} is in ${client.guilds.cache.size} servers`);
-    const Guilds = client.guilds.cache.map(guild => [/*guild.id*/ guild.name, guild.owner]);
+    const Guilds = client.guilds.cache.map(guild => [guild.id, guild.name, guild.owner]);
     console.log(Guilds);
 });
 client.on('debug', console.log);
@@ -71,11 +71,11 @@ client.on('messageCreate', async (message) => {
                 const footerIcon = message.author.displayAvatarURL();
                 const exampleEmbed = new discord_js_1.MessageEmbed()
                     .setColor('#0099ff')
-                    .setTitle('My Uptime')
-                    .addField('**Uptime**', `${days}d ${hours}h ${minutes}m ${seconds}s`, true)
+                    .setTitle(`**Uptime**\n${days}d ${hours}h ${minutes}m ${seconds}s`)
+                    // .addField('**Uptime**', `${days}d ${hours}h ${minutes}m ${seconds}s`, true)
                     .setTimestamp()
                     .setFooter({ text: footerText, iconURL: footerIcon });
-                exampleEmbed.setThumbnail(client.user.displayAvatarURL());
+                //exampleEmbed.setThumbnail(client.user!.displayAvatarURL());
                 await message.channel.send({ embeds: [exampleEmbed] });
                 break;
             case 'ping':
@@ -99,7 +99,7 @@ client.on('messageCreate', async (message) => {
                         .setDescription(args.join(' '))
                         .setTimestamp()
                         .setFooter({ text: footerText, iconURL: footerIcon });
-                    sayEmbed.setThumbnail(client.user.displayAvatarURL());
+                    //sayEmbed.setThumbnail(client.user!.displayAvatarURL());
                     await message.channel.send({ embeds: [sayEmbed] });
                 }
                 else

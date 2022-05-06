@@ -76,11 +76,11 @@ client.on('messageCreate', async (message) => {
         const footerIcon = message.author.displayAvatarURL();
         const exampleEmbed = new MessageEmbed()
 	      .setColor('#0099ff')
-	      .setTitle('My Uptime')
-	      .addField('**Uptime**', `${days}d ${hours}h ${minutes}m ${seconds}s`, true)
+	      .setTitle(`**Uptime**\n${days}d ${hours}h ${minutes}m ${seconds}s`)
+	      // .addField('**Uptime**', `${days}d ${hours}h ${minutes}m ${seconds}s`, true)
 	      .setTimestamp()
 	      .setFooter({ text: footerText, iconURL: footerIcon });
-        exampleEmbed.setThumbnail(client.user!.displayAvatarURL());
+        //exampleEmbed.setThumbnail(client.user!.displayAvatarURL());
         await message.channel.send({ embeds: [exampleEmbed] });
         break;
       
@@ -102,7 +102,7 @@ client.on('messageCreate', async (message) => {
               .setDescription(args.join(' '))
 	            .setTimestamp()
 	            .setFooter({ text: footerText, iconURL: footerIcon });
-              sayEmbed.setThumbnail(client.user!.displayAvatarURL());
+              //sayEmbed.setThumbnail(client.user!.displayAvatarURL());
               await message.channel.send({ embeds: [sayEmbed] });
             }
             else await message.reply('You did not send a message to repeat, cancelling command.');

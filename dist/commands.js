@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const discord_js_1 = require("discord.js");
-require("./config");
+// import config from './config';
 // const { prefix } = config;
 const commands = {
     'help': {

@@ -10,11 +10,9 @@ Currently, our main bots are pushed with security updates and our templates are 
 | ------- | ------------------ |-----|
 | 2.1.x   | :white_check_mark: | Updated for threads |
 | 2.0.x   | :x:                | Major bugs and vulnerabilities |
-| 1.0.x   | :white_check_mark: | Base with using DJS v13 |
+| 1.0.x   | :white_check_mark: | Basic commands with DJS v13 |
 | < 1.0   | :x:                | Was using DJS v12 |
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
-
-To report a vulnerability, please report it in the support server or make an issue on the github page.
+To report a vulnerability, please report it in the [support server](https://discord.gg/qW9mktKVBQ) or make an issue on the github page.
