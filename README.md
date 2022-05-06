@@ -15,4 +15,4 @@ Currently, our main bots are pushed with security updates and our templates are 
 
 ## Reporting a Vulnerability
 
-To report a vulnerability, please report it in the [support server](https://discord.gg/qW9mktKVBQ) or make an issue on the github page.
+To report a vulnerability, please report it in the [support server](https://discord.gg/qW9mktKVBQ), reach out to me on discord or make an issue on the github page.

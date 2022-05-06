@@ -98,8 +98,7 @@ client.on('messageCreate', async (message) => {
               const footerIcon = message.author.displayAvatarURL();
               const sayEmbed = new MessageEmbed()
 	            .setColor('#0099ff')
-	            .setTitle('Say Command')
-              .setDescription(args.join(' '))
+	            .setTitle(args.join(' '))
 	            .setTimestamp()
 	            .setFooter({ text: footerText, iconURL: footerIcon });
               //sayEmbed.setThumbnail(client.user!.displayAvatarURL());
