@@ -1,4 +1,4 @@
-entrypoint = "dist/index.js"
+entrypoint = "src/index.ts"
 
 [interpreter]
 command = [

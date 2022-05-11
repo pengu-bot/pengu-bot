@@ -20,7 +20,7 @@ client.on('ready', () => {
         type: "LISTENING"
     });
     console.log(`${client.user?.tag} is in ${client.guilds.cache.size} servers`);
-    const Guilds = client.guilds.cache.map(guild => [guild.id, guild.name, guild.owner]);
+    const Guilds = client.guilds.cache.map(guild => [guild.name]);
     console.log(Guilds);
 });
 client.on('debug', console.log);
@@ -95,8 +95,7 @@ client.on('messageCreate', async (message) => {
                     const footerIcon = message.author.displayAvatarURL();
                     const sayEmbed = new discord_js_1.MessageEmbed()
                         .setColor('#0099ff')
-                        .setTitle('Say Command')
-                        .setDescription(args.join(' '))
+                        .setTitle(args.join(' '))
                         .setTimestamp()
                         .setFooter({ text: footerText, iconURL: footerIcon });
                     //sayEmbed.setThumbnail(client.user!.displayAvatarURL());
@@ -104,6 +103,15 @@ client.on('messageCreate', async (message) => {
                 }
                 else
                     await message.reply('You did not send a message to repeat, cancelling command.');
+                break;
+            case 'echo':
+                /*if (message.author.id === '857044925934075904') {message.channel.send(args.join(' ') + ' \n-anonymous')}*/
+                if (message.author.id === '710738214000001075' /* || message.author.id === '857044925934075904'*/) {
+                    message.channel.send(args.join(' '));
+                }
+                else {
+                    message.channel.send('Only the bot-owner can use this >:(');
+                }
                 break;
             case 'setup':
             case 'start':
