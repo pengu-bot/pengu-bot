@@ -1,6 +1,6 @@
 # Pengu! The open-source bot!
 
-For more info, read our [docs](https://github.com/pengu-bot?view_as=public#welcome-to-the-pengubot-repo).
+For more info, read the Pengu! [Documentation](https://github.com/pengu-bot?view_as=public#welcome-to-the-pengubot-repo).
 
 ## Supported Versions
 
